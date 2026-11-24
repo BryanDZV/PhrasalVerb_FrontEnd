@@ -1,0 +1,8 @@
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+if (!API_URL) {
+  throw new Error(
+    "API_URL is not defined. Please set the NEXT_PUBLIC_API_URL environment variable.",
+  );
+}
+
+export const apiUrl = API_URL;
