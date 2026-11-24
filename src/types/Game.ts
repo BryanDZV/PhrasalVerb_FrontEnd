@@ -9,3 +9,5 @@ export type Game = {
   gameId: string;
   cards: Card[];
 };
+
+export type GameMode = "TRANSLATION";
