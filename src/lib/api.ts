@@ -1,5 +1,5 @@
-import type { Game, GameMode } from "@/app/types/Game";
-
+import type { Game, GameMode } from "@/types/Game";
+import { apiUrl } from "@/lib/config";
 export async function createGame(mode: GameMode, pairs: number): Promise<Game> {
   //urlSearchParams te da una url tipo
   //api/games?mode=TRANSLATION&pairs=1
@@ -8,10 +8,9 @@ export async function createGame(mode: GameMode, pairs: number): Promise<Game> {
     pairs: String(pairs),
   });
 
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/games?${params.toString()}`,
-    { method: "POST" },
-  );
+  const res = await fetch(`${apiUrl}/api/games?${params.toString()}`, {
+    method: "POST",
+  });
 
   if (!res.ok) {
     throw new Error(`Error creando partida: ${res.status} ${res.statusText}`);
