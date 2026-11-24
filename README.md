@@ -51,16 +51,16 @@ Aplicación web para practicar phrasal verbs en inglés mediante un juego de emp
 
 ## ⚙️ Variables de entorno
 
-| Variable              | Descripción                           | Ejemplo                 |
-| --------------------- | ------------------------------------- | ----------------------- |
+| Variable | Descripción                           | Ejemplo                 |
+| --- | ------------------------------------- | ----------------------- |
 | `NEXT_PUBLIC_API_URL` | URL base del backend, sin barra final | `http://localhost:8080` |
 
 `.env.local` no se sube a git; `.env.example` sí, como plantilla. Si la variable no está definida, la aplicación falla al arrancar con un mensaje claro (ver `src/lib/config.ts`).
 
 ## 📜 Scripts disponibles
 
-| Comando         | Descripción                      |
-| --------------- | -------------------------------- |
+| Comando | Descripción                      |
+| --- | -------------------------------- |
 | `npm run dev`   | Inicia el servidor de desarrollo |
 | `npm run build` | Genera la versión de producción  |
 | `npm run start` | Sirve la versión de producción   |
@@ -145,16 +145,16 @@ export type Game = {
 
 ## 📚 Conceptos aplicados
 
-| Concepto                             | Dónde se usa                                                    | Documentación                                                                                                     |
-| ------------------------------------ | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Origen y CORS                        | El front y el backend están en puertos distintos                | [MDN: CORS](https://developer.mozilla.org/es/docs/Web/HTTP/Guides/CORS)                                           |
-| Verbos HTTP y códigos de estado      | `POST` crea la partida y devuelve 201; un `GET` da 405          | [MDN: 405](https://developer.mozilla.org/es/docs/Web/HTTP/Reference/Status/405)                                   |
-| `fetch` y `res.ok`                   | `fetch` no lanza error con un 4xx/5xx; hay que comprobarlo      | [MDN: Fetch](https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch)                                 |
-| `URLSearchParams`                    | Construye `?mode=...&pairs=...` sin concatenar a mano           | [MDN: URLSearchParams](https://developer.mozilla.org/es/docs/Web/API/URLSearchParams)                             |
-| `async` / `await` y promesas         | `createGame` devuelve `Promise<Game>`                           | [MDN: async function](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/async_function)   |
-| Variables `NEXT_PUBLIC_`             | Se incrustan en el JavaScript del navegador: nunca van secretos | [Next.js: variables de entorno](https://nextjs.org/docs/app/guides/environment-variables)                         |
-| Componentes de servidor y de cliente | `"use client"` permite usar `onClick`                           | [Next.js: Server and Client Components](https://nextjs.org/docs/app/getting-started/server-and-client-components) |
-| Tipos de unión en TypeScript         | `GameMode` impide pedir un modo que no existe                   | [TypeScript: Union Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types)         |
+| Concepto | Dónde se usa | Documentación |
+| --- | --- | --- |
+| Origen y CORS | El front y el backend están en puertos distintos | [MDN: CORS](https://developer.mozilla.org/es/docs/Web/HTTP/Guides/CORS) |
+| Verbos HTTP y códigos de estado | `POST` crea la partida y devuelve 201; un `GET` da 405 | [MDN: 405](https://developer.mozilla.org/es/docs/Web/HTTP/Reference/Status/405) |
+| `fetch` y `res.ok` | `fetch` no lanza error con un 4xx/5xx; hay que comprobarlo | [MDN: Fetch](https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch) |
+| `URLSearchParams` | Construye `?mode=...&pairs=...` sin concatenar a mano | [MDN: URLSearchParams](https://developer.mozilla.org/es/docs/Web/API/URLSearchParams) |
+| `async` / `await` y promesas | `createGame` devuelve `Promise<Game>` | [MDN: async function](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/async_function) |
+| Variables `NEXT_PUBLIC_` | Se incrustan en el JavaScript del navegador: nunca van secretos | [Next.js: variables de entorno](https://nextjs.org/docs/app/guides/environment-variables) |
+| Componentes de servidor y de cliente | `"use client"` permite usar `onClick` | [Next.js: Server and Client Components](https://nextjs.org/docs/app/getting-started/server-and-client-components) |
+| Tipos de unión en TypeScript | `GameMode` impide pedir un modo que no existe | [TypeScript: Union Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) |
 
 ## 🗺️ Próximos pasos
 
