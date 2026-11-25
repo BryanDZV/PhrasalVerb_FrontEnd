@@ -1,0 +1,7 @@
+{
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 100,
+    "editor.wordWrapIndicator": false,
+    "diffEditor.wordWrap": "inherit",
+    "chat.editor.wordWrap": "on"
+}
